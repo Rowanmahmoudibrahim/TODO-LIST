@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TODO_LIST</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="TODO.png" type="image/x-icon">
+</head>
+<body class="min-h-screen font-sans antialiased">
+
+  <main class="mx-auto flex min-h-screen w-full max-w-2xl items-center px-4 py-8">
+    <section class="card w-full rounded-3xl p-6 sm:p-12">
+
+      <header class="mb-6 text-center">
+        <div class="mx-auto mb-3 grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-teal-400 to-indigo-500 text-2xl shadow-lg">✓</div>
+        <h1 class="text-4xl font-bold tracking-tight text-slate-800 sm:text-5xl">My Tasks</h1>
+        <p class="mt-1 text-sm text-slate-500">Stay organized, one task at a time.</p>
+      </header>
+
+      <div class="add-box flex gap-2 rounded-2xl bg-slate-100 p-1.5">
+        <input id="todoInput" placeholder="What do you need to do?"
+          class="min-w-0 flex-1 bg-transparent px-4 py-3.5 text-lg text-slate-800 outline-none placeholder:text-slate-400">
+        <button id="addBtn"
+          class="rounded-xl bg-gradient-to-r from-teal-500 to-indigo-500 px-8 py-3.5 text-lg font-semibold text-white shadow-md transition hover:shadow-lg hover:brightness-110 active:scale-95">
+          Add
+        </button>
+      </div>
+
+      <ul id="todoList" class="mt-6 space-y-3"></ul>
+    </section>
+  </main>
+
+  <dialog id="editDialog" class="w-[92%] max-w-md rounded-3xl p-0">
+    <div class="p-6 sm:p-8">
+      <h2 class="text-2xl font-bold text-slate-800">Edit task</h2>
+      <p class="mt-1 text-sm text-slate-500">Change the text and save.</p>
+      <input id="editInput"
+        class="mt-5 w-full rounded-2xl bg-slate-100 px-4 py-3.5 text-lg text-slate-800 outline-none focus:ring-2 focus:ring-teal-500">
+      <div class="mt-6 flex justify-end gap-2">
+        <button id="cancelBtn" class="rounded-xl bg-slate-100 px-5 py-2.5 font-medium text-slate-600 transition hover:bg-slate-200 active:scale-95">Cancel</button>
+        <button id="saveBtn" class="rounded-xl bg-gradient-to-r from-teal-500 to-indigo-500 px-6 py-2.5 font-semibold text-white shadow-md transition hover:brightness-110 active:scale-95">Save</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
